@@ -11,11 +11,11 @@ namespace BJ.Helpers
     {
         public void DoGreeting()
         {
-            //Thread.Sleep(1000);
+            Thread.Sleep(1000);
             Console.WriteLine("Hello. Do you want to play blackjack with computer?" + Environment.NewLine);
-            //Thread.Sleep(3000);
+            Thread.Sleep(1000);
             Console.WriteLine("Lets do it!" + Environment.NewLine);
-            //Thread.Sleep(2000);
+            Thread.Sleep(1000);
             Console.Write("To get started, please, enter your name: ");
         }
     }
