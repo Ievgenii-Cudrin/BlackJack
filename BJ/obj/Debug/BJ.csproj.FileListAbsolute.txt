@@ -1,0 +1,6 @@
+E:\BJ\BJ\bin\Debug\BJ.exe.config
+E:\BJ\BJ\bin\Debug\BJ.exe
+E:\BJ\BJ\bin\Debug\BJ.pdb
+E:\BJ\BJ\obj\Debug\BJ.csprojResolveAssemblyReference.cache
+E:\BJ\BJ\obj\Debug\BJ.exe
+E:\BJ\BJ\obj\Debug\BJ.pdb
