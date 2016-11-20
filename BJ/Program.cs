@@ -44,6 +44,8 @@ namespace BJ
                     }
                     Thread.Sleep(2000);
                     bool stop = false;
+
+                    // TODO Добавить проверку на количество очков туза
                     if(userSummPointsFor == 21)
                     {
                         Console.WriteLine();
@@ -54,6 +56,7 @@ namespace BJ
                     {
                         Console.WriteLine("Do you want new card? Yes - Enter 1, No - Enter 2");
                         string entry = Console.ReadLine();
+                        // TODO Добавить проверку на ввод
                         switch (entry)
                         {
                             case "1":
