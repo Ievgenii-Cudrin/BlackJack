@@ -11,82 +11,36 @@ namespace BJ.Helpers
     public class WorkWithCard
     {
         List<Card> cards = new List<Card>();
-        List<Card> GetCards()
-        {
-            int points = 0;
 
+        public List<Card> DeckFill()
+        {
             foreach (Suit suit in Enum.GetValues(typeof(Suit)))
             {
                 foreach (Sing sing in Enum.GetValues(typeof(Sing)))
-                {   
-                    switch (sing.ToString())
-                    {
-                        case "Two":
-                            points = 2;
-                            break;
-                        case "Three":
-                            points = 3;
-                            break;
-                        case "Four":
-                            points = 4;
-                            break;
-                        case "Five":
-                            points = 5;
-                            break;
-                        case "Six":
-                            points = 6;
-                            break;
-                        case "Seven":
-                            points = 7;
-                            break;
-                        case "Eight":
-                            points = 8;
-                            break;
-                        case "Nine":
-                            points = 9;
-                            break;
-                        case "Ten":
-                        case "Valet":
-                        case "Dama":
-                        case "Korol":
-                            points = 10;
-                            break;
-                        case "Tuz":
-                            points = 11;
-                            break;
-                        default:
-                            break;
-                    }
-                    Card card = new Card() {
-                        QuantityPoints = points,
-                        Sing = sing,
-                        Suit = suit
-                    };
+                {
+                    int points = sing.ToString() == "Two" ? 2 : sing.ToString() == "Three" ? 3 : sing.ToString() == "Four" ? 4 : sing.ToString() == "Five" ? 5 : sing.ToString() == "Six" ? 6 : sing.ToString() == "Seven" ? 7 : sing.ToString() == "Eight" ? 8 : sing.ToString() == "Nine" ? 9 : sing.ToString() == "Ace" ? 11 : 10;
+                    Card card = new Card() { QuantityPoints = points, Sing = sing, Suit = suit };
                     cards.Add(card);
                 }
             }
             return cards;
         }
-
+        
         public Card GetRandomCard()
-        {
-            List<Card> cards = GetCards();
-            List<Card> newCards = Randomize(cards);
-            int index = new Random().Next(newCards.Count);
-            return newCards[index];
-        }
-        public static List<Card> Randomize(List<Card> list)
         {
             List<Card> randomizedList = new List<Card>();
             Random rnd = new Random();
-            while (list.Count > 0)
+            List<Card> deckFill = DeckFill();
+            while (deckFill.Count > 0)
             {
-                int index = rnd.Next(0, list.Count); //pick a random item from the master list
-                randomizedList.Add(list[index]); //place it at the end of the randomized list
-                list.RemoveAt(index);
+                int indexForRandomize = rnd.Next(0, deckFill.Count);
+                randomizedList.Add(deckFill[indexForRandomize]);
+                deckFill.RemoveAt(indexForRandomize);
             }
-            return randomizedList;
+            int indexForCard = new Random().Next(deckFill.Count);
+            Card card = randomizedList[indexForCard];
+            randomizedList.Remove(card);
+            return card;
         }
-
     }
 }

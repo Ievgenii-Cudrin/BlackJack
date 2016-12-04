@@ -13,6 +13,9 @@ namespace BJ
     {
         static void Main(string[] args)
         {
+            //разделить на бизнесс логику и вьюхи
+            //создать класс консоль
+            //2-3 строки в методе мейн 
             WorkWithCard workWithCard = new WorkWithCard();
             User user = new User();
             user.Cards = new List<Card>();

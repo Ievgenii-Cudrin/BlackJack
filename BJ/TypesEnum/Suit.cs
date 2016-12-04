@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace BJ.TypesEnum
 {
+    //перевести масти
     public enum Suit
     {
-        Kresta,
-        Bubna,
-        Pika,
-        Chirva
+        Clubs,
+        Diamonds,
+        Spades,
+        Hearts
     }
 }

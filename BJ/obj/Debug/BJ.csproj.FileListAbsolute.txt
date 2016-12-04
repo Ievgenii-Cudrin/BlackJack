@@ -10,3 +10,9 @@ E:\Проекты\BJ\BJ\obj\Debug\BJ.pdb
 E:\Проекты\BJ\BJ\bin\Debug\BJ.exe
 E:\Проекты\BJ\BJ\bin\Debug\BJ.pdb
 E:\Проекты\BJ\BJ\obj\Debug\BJ.csprojResolveAssemblyReference.cache
+G:\Кудрин\BJ\BJ\bin\Debug\BJ.exe.config
+G:\Кудрин\BJ\BJ\obj\Debug\BJ.exe
+G:\Кудрин\BJ\BJ\obj\Debug\BJ.pdb
+G:\Кудрин\BJ\BJ\bin\Debug\BJ.exe
+G:\Кудрин\BJ\BJ\bin\Debug\BJ.pdb
+G:\Кудрин\BJ\BJ\obj\Debug\BJ.csprojResolveAssemblyReference.cache

@@ -46,6 +46,7 @@
     <Compile Include="Entities\Card.cs" />
     <Compile Include="Entities\Comp.cs" />
     <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\Wins.cs" />
     <Compile Include="Helpers\Greeting.cs" />
     <Compile Include="Helpers\WorkWithCard.cs" />
     <Compile Include="Program.cs" />

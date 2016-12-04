@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BJ.TypesEnum
 {
+    //перевести все на английский
     public enum Sing
     {
         Two,
@@ -17,9 +18,9 @@ namespace BJ.TypesEnum
         Eight,
         Nine,
         Ten,
-        Valet,
-        Dama,
-        Korol,
-        Tuz
+        Jack,
+        Queen,
+        King,
+        Ace
     }
 }

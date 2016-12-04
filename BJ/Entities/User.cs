@@ -8,6 +8,7 @@ namespace BJ.Entities
 {
     public class User
     {
+        //количество побед вынести в отдельную сущность
         public string Name { get; set; }
         public List<Card> Cards { get; set; }
         public int QuantityOfWins { get; set; } 
