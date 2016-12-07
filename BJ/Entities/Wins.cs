@@ -8,7 +8,7 @@ namespace BJ.Entities
 {
     public class Wins
     {
-        public int PlayerQuantityWins { get; set; }
-        public int ComputerQuantityWins { get; set; }
+        public static int PlayerQuantityWins { get; set; }
+        public static int ComputerQuantityWins { get; set; }
     }
 }

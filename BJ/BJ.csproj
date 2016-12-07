@@ -43,12 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleLogic\ConsoleMethod.cs" />
     <Compile Include="Entities\Card.cs" />
     <Compile Include="Entities\Comp.cs" />
     <Compile Include="Entities\User.cs" />
     <Compile Include="Entities\Wins.cs" />
     <Compile Include="Helpers\Greeting.cs" />
     <Compile Include="Helpers\WorkWithCard.cs" />
+    <Compile Include="Logic\ComputerLogic.cs" />
+    <Compile Include="Logic\Game.cs" />
+    <Compile Include="Logic\GameResult.cs" />
+    <Compile Include="Logic\StartNewGame.cs" />
+    <Compile Include="Logic\UserLogic.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TypesEnum\Sing.cs" />
@@ -57,6 +63,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
