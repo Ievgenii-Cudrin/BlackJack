@@ -17,32 +17,26 @@ namespace BJ.Logic
         public void StartGameForUser()
         {
             user.Cards = new List<Card>();
-            
             for (int i = 0; i < 9; i++)
             {
-                Console.WriteLine("Your card number: " + (i + 1).ToString());
                 user.Cards.Add(workWithCard.GetRandomCard());
-                Console.WriteLine(user.Cards[i].Suit + " " + user.Cards[i].Sing + " ");
                 userSummPointsFor += user.Cards[i].QuantityPoints;
-                Console.WriteLine("Summ of your points = " + userSummPointsFor + Environment.NewLine);
+                Console.WriteLine("Your card number: " + (i + 1).ToString() + "\n" + user.Cards[i].Suit + " " + user.Cards[i].Sing + " " + "\n" + "Summ of your points = " + userSummPointsFor + Environment.NewLine);
                 bool stop = false;
                 if (userSummPointsFor > 21)
                 {
                     Console.WriteLine("You bust points");
                     break;
                 }
-                // TODO Добавить проверку на количество очков туза
                 else if (userSummPointsFor == 21)
                 {
-                    Console.WriteLine();
-                    Console.WriteLine("Computer next takes card");
+                    Console.WriteLine("\n" + "Computer next takes card");
                     break;
                 }
                 if (i >= 1)
                 {
                     Console.WriteLine("Do you want new card? Yes - Enter 1, No - Enter 2");
                     string entry = Console.ReadLine();
-                    // TODO Добавить проверку на ввод
                     switch (entry)
                     {
                         case "1":
@@ -57,8 +51,7 @@ namespace BJ.Logic
 
                 if (stop)
                 {
-                    Console.WriteLine();
-                    Console.WriteLine("Computer next takes card");
+                    Console.WriteLine("\n" + "Computer next takes card");
                     break;
                 }
             }

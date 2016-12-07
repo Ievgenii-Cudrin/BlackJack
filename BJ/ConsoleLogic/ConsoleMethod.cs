@@ -13,35 +13,17 @@ namespace BJ.ConsoleLogic
     {
         public void ShowGame()
         {
-            //Приветствие
             new Greeting().DoGreeting();
-
             UserLogic.user.Name = Console.ReadLine();
-            Console.WriteLine("So, " + UserLogic.user.Name + ", if you know the rules, we will begin to play, if not, let the developers and they mount a description of them." + Environment.NewLine + "Let's start dealing cards" + Environment.NewLine);
+            Console.WriteLine("So, " + UserLogic.user.Name + ", if you know the rules, we will begin to play, if not, let the developers and they mount a description of them." + Environment.NewLine + "Let's start dealing cards" + Environment.NewLine + "\n");
             
-            for (;;)
+            while(true)
             {
-                //Юзер
                 new UserLogic().StartGameForUser();
-
-                //Компьютер
                 new ComputerLogic().StartGameForComputer();
-
-                Console.WriteLine();
-                Console.WriteLine(UserLogic.user.Name + " points = " + UserLogic.userSummPointsFor);
-                Console.WriteLine("Computer points = " + ComputerLogic.compSummPointsFor);
-
-                //Результаты
+                Console.WriteLine(UserLogic.user.Name + " points = " + UserLogic.userSummPointsFor + "\n" + "Computer points = " + ComputerLogic.compSummPointsFor + "\n");
                 new GameResult().GameResults();
-
-                Console.WriteLine();
-                Console.WriteLine("Score:");
-                Console.WriteLine(UserLogic.user.Name + ": " + Wins.PlayerQuantityWins);
-                Console.WriteLine(ComputerLogic.comp.Name + ": " + Wins.ComputerQuantityWins);
-                Console.WriteLine();
-
-                //Новая игра
-                Console.WriteLine("Do you want to continue? Yes - Enter 1, No - Enter 2");
+                Console.WriteLine("Score:" + "\n" + UserLogic.user.Name + ": " + Wins.PlayerQuantityWins + "\n" + ComputerLogic.comp.Name + ": " + Wins.ComputerQuantityWins + "\n"+ "Do you want to continue? Yes - Enter 1, No - Enter 2");
                 string entryAnswer = Console.ReadLine();
                 bool stops = false;
                 switch (entryAnswer)
@@ -57,8 +39,7 @@ namespace BJ.ConsoleLogic
                 if (stops)
                     break;
             }
-
-            //Окончание
+            
             Console.WriteLine("Finish");
             Console.ReadLine();
         }

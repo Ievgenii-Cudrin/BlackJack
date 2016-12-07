@@ -13,34 +13,20 @@ namespace BJ.Logic
     {
         WorkWithCard workWithCard = new WorkWithCard();
         public static Comp comp = new Comp();
-
         public static int compSummPointsFor = 0;
-
         public void StartGameForComputer()
         {
             comp.Cards = new List<Card>();
             for (int i = 0; i < 9; i++)
             {
                 Thread.Sleep(1000);
-                Console.WriteLine();
-                Console.WriteLine("Computer card number: " + (i + 1).ToString());
                 comp.Cards.Add(workWithCard.GetRandomCard());
-                Console.WriteLine("***** " + comp.Cards[i].Suit);
                 compSummPointsFor += comp.Cards[i].QuantityPoints;
-                Console.WriteLine("Summ of computer points = **" + Environment.NewLine);
-                if (compSummPointsFor > 21)
-                {
-                    Console.WriteLine("Computer bust points");
+                Console.WriteLine("\n" + "Computer card number: " + (i + 1).ToString() + "\n" + "***** " + comp.Cards[i].Suit + "\n" + "Summ of computer points = **" + "\n");
+                if (compSummPointsFor >= 17)
                     break;
-                }
-                if (compSummPointsFor < 17)
-                {
-                    continue;
-                }
                 else
-                {
-                    break;
-                }
+                    continue;
             }
         }
     }
