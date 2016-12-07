@@ -11,7 +11,7 @@ namespace BJ.Helpers
     public class WorkWithCard
     {
         List<Card> cards = new List<Card>();
-
+        public static List<Card> randomizedList = new List<Card>();
         public List<Card> DeckFill()
         {
             foreach (Suit suit in Enum.GetValues(typeof(Suit)))
@@ -28,16 +28,19 @@ namespace BJ.Helpers
         
         public Card GetRandomCard()
         {
-            List<Card> randomizedList = new List<Card>();
             Random rnd = new Random();
-            List<Card> deckFill = DeckFill();
-            while (deckFill.Count > 0)
+            if(randomizedList.Count == 0)
             {
-                int indexForRandomize = rnd.Next(0, deckFill.Count);
-                randomizedList.Add(deckFill[indexForRandomize]);
-                deckFill.RemoveAt(indexForRandomize);
+                List<Card> deckFill = DeckFill();
+                while (deckFill.Count > 0)
+                {
+                    int indexForRandomize = rnd.Next(0, deckFill.Count);
+                    randomizedList.Add(deckFill[indexForRandomize]);
+                    deckFill.RemoveAt(indexForRandomize);
+                }
             }
-            int indexForCard = new Random().Next(deckFill.Count);
+            
+            int indexForCard = new Random().Next(randomizedList.Count);
             Card card = randomizedList[indexForCard];
             randomizedList.Remove(card);
             return card;

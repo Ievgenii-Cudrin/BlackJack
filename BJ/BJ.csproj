@@ -51,9 +51,7 @@
     <Compile Include="Helpers\Greeting.cs" />
     <Compile Include="Helpers\WorkWithCard.cs" />
     <Compile Include="Logic\ComputerLogic.cs" />
-    <Compile Include="Logic\Game.cs" />
     <Compile Include="Logic\GameResult.cs" />
-    <Compile Include="Logic\StartNewGame.cs" />
     <Compile Include="Logic\UserLogic.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

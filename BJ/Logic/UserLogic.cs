@@ -17,8 +17,6 @@ namespace BJ.Logic
         public void StartGameForUser()
         {
             user.Cards = new List<Card>();
-            user.Name = Console.ReadLine();
-            Console.WriteLine("So, " + user.Name + ", if you know the rules, we will begin to play, if not, let the developers and they mount a description of them." + Environment.NewLine + "Let's start dealing cards" + Environment.NewLine);
             
             for (int i = 0; i < 9; i++)
             {

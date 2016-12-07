@@ -11,7 +11,5 @@ namespace BJ.Entities
         const string name = "Comp";
         public string Name { get { return name; } }
         public List<Card> Cards { get; set; }
-        public int QuantityOfWins { get; set; }
-
     }
 }

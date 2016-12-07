@@ -11,6 +11,5 @@ namespace BJ.Entities
         //количество побед вынести в отдельную сущность
         public string Name { get; set; }
         public List<Card> Cards { get; set; }
-        public int QuantityOfWins { get; set; } 
     }
 }
