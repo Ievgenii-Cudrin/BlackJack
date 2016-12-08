@@ -19,7 +19,8 @@ namespace BJ.Logic
             user.Cards = new List<Card>();
             for (int i = 0; i < 9; i++)
             {
-                user.Cards.Add(workWithCard.GetRandomCard());
+                Thread.Sleep(1000);
+                user.Cards.Add(workWithCard.GetRandomCard());      //take card and plus summ pionts 
                 userSummPointsFor += user.Cards[i].QuantityPoints;
                 Console.WriteLine("Your card number: " + (i + 1).ToString() + "\n" + user.Cards[i].Suit + " " + user.Cards[i].Sing + " " + "\n" + "Summ of your points = " + userSummPointsFor + Environment.NewLine);
                 bool stop = false;
@@ -48,7 +49,6 @@ namespace BJ.Logic
                             break;
                     }
                 }
-
                 if (stop)
                 {
                     Console.WriteLine("\n" + "Computer next takes card");
